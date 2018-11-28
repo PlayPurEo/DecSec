@@ -1,0 +1,5 @@
+1.@SpringBootApplication注解学习：
+   它其实是由三个重要注解组成：
+	@SpringBootConfiguration会将当前类标记为配置类，这个类内的以@Bean标记的方法的实例纳入到spring容器中，实例名就是方法名。
+	@EnableAutoConfiguration 根据添加的jar包配置项目的默认配置。
+	@componentScan就是扫描当前包及其子包下被@component @service @controller @repository等注解标记的类并纳入到spring容器中进行管理。这里很重要的一点是它只扫描当前包及其子包，如果想扫描同一级的其他包，要加scanBasePackages=。
